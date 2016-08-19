@@ -11,18 +11,18 @@ public class Controller {
     Integer controleInterno= 1;
 
     /*****
-     * 1 ate 333 - 3 = 330 (Ficam 3 fora que seriam da 14 pagina)
+     * 1 ate 333
      *
-     * 331 ate 663
+     * 334 ate 667
      *
-     * 664 ate 996
+     * 667 ate 999
      *
      * @return
      */
 
     public List<ColunasNumeros> gerarSequencias(){
 
-        Integer col1 = 1 , col2 = 331, col3 = 664;
+        Integer col1 = 1 , col2 = 334, col3 = 667;
 
         listColunaNumeros.add(new ColunasNumeros(col1,col2,col3));
         for (controle = 1; controle <333 ; controle ++){

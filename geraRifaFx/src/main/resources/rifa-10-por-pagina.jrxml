@@ -3,12 +3,24 @@
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="TITULO" class="java.lang.String"/>
+	<parameter name="VALOR" class="java.lang.String"/>
+	<parameter name="DESCRICAO" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select * from colunas_numeros]]>
+		<![CDATA[]]>
 	</queryString>
-	<field name="coluna1" class="java.lang.Integer"/>
-	<field name="coluna2" class="java.lang.Integer"/>
-	<field name="coluna3" class="java.lang.Integer"/>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="coluna1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[coluna1]]></fieldDescription>
+	</field>
+	<field name="coluna2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[coluna2]]></fieldDescription>
+	</field>
+	<field name="coluna3" class="java.lang.Integer">
+		<fieldDescription><![CDATA[coluna3]]></fieldDescription>
+	</field>
 	<detail>
 		<band height="81" splitType="Stretch">
 			<rectangle radius="10">
@@ -24,36 +36,14 @@
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement x="41" y="7" width="147" height="15" uuid="fefd30fd-2507-49e9-b8f2-07952b95cf80"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Rifa Lírio do Vale Out/2016]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="285" y="7" width="189" height="15" uuid="2351c752-9710-4903-8d53-ccb73ec1888f"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Rifa Lírio do Vale Out/2016]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="220" y="20" width="326" height="23" uuid="e3b1283e-d305-4398-80fa-dbe705b5f4de"/>
+				<reportElement x="219" y="46" width="50" height="14" uuid="93023495-f10f-4e8c-89fc-a1eb50a3d3bd"/>
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[Rifa-se a importância de 200,00 (Duzentos reais), a correr pela extração da Loteria Federal do dia 08/10/2016, no 1º prêmio.
-]]></text>
+				<text><![CDATA[VALOR: R$]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="219" y="41" width="326" height="16" uuid="93023495-f10f-4e8c-89fc-a1eb50a3d3bd"/>
-				<textElement verticalAlignment="Middle">
-					<font size="9"/>
-				</textElement>
-				<text><![CDATA[VALOR: R$ 3,00]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="229" y="56" width="58" height="16" uuid="a64213d6-7f45-4fa7-9bd7-1e14404b16bd"/>
+				<reportElement x="229" y="58" width="58" height="15" uuid="a64213d6-7f45-4fa7-9bd7-1e14404b16bd"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[NÚMEROS:]]></text>
 			</staticText>
@@ -86,14 +76,14 @@
 				<text><![CDATA[NOME:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="36" width="57" height="12" uuid="eb5591b8-7627-42f4-9155-9b3761e82b99"/>
+				<reportElement x="10" y="33" width="57" height="12" uuid="eb5591b8-7627-42f4-9155-9b3761e82b99"/>
 				<textElement verticalAlignment="Top">
 					<font size="9"/>
 				</textElement>
 				<text><![CDATA[ENDEREÇO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="50" width="57" height="12" uuid="daf9e3cb-2ed7-4a8a-8c07-477b9514074d"/>
+				<reportElement x="10" y="45" width="57" height="12" uuid="daf9e3cb-2ed7-4a8a-8c07-477b9514074d"/>
 				<textElement verticalAlignment="Top">
 					<font size="9"/>
 				</textElement>
@@ -121,9 +111,9 @@
 				<textFieldExpression><![CDATA[$F{coluna3}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="15" y="58" width="57" height="15" uuid="24e76401-6b6f-4e6b-8bfd-8bc7711cc0a8"/>
+				<reportElement x="14" y="56" width="16" height="15" uuid="24e76401-6b6f-4e6b-8bfd-8bc7711cc0a8"/>
 				<textElement verticalAlignment="Top"/>
-				<text><![CDATA[R$ 3,00]]></text>
+				<text><![CDATA[R$]]></text>
 			</staticText>
 			<line>
 				<reportElement x="0" y="76" width="555" height="1" uuid="7689d9d3-64ce-40ca-ab2e-c4a139484804"/>
@@ -131,6 +121,35 @@
 					<pen lineStyle="Dashed"/>
 				</graphicElement>
 			</line>
+			<textField>
+				<reportElement x="15" y="7" width="173" height="13" uuid="72a7fc80-a92a-4fb0-9d34-5ccb9f61244f"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="6" width="295" height="13" uuid="e594b899-a072-4449-85d2-9795f3cd4d33"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="20" width="316" height="27" uuid="989ae7ba-8895-4619-92a5-ab6e1810a0a1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DESCRICAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="56" width="37" height="14" uuid="63410957-232f-4495-9b12-5244c430a9b4"/>
+				<textFieldExpression><![CDATA[$P{VALOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="47" width="37" height="13" uuid="e3aeb08d-4511-4afe-a5b9-cc5fed157fb9"/>
+				<textFieldExpression><![CDATA[$P{VALOR}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
