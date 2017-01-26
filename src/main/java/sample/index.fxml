@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Integer?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+
+    <Label text="Bem Vindo" GridPane.columnIndex="1" />
+
+    <Label id="messageLabel" fx:id="mensagemLabel" prefHeight="17.0" prefWidth="479.0" textFill="#bc2a2a" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    
+    <Label fx:id="tituloLabel" text="Titulo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <TextField fx:id="tituloField" promptText="Rifa de Verão" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label fx:id="valorLabel" text="Valor R$:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+    <TextField fx:id="valorField" promptText="5,00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+    <Label fx:id="descricaoLabel" text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+    <TextField fx:id="descricaoField" promptText="Rifa-se a importância de 500,00 (Quinhentos reais)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
+        <Button fx:id="btnGerarRifa" onAction="#onGerarRifa" text="Gerar Rifa" />
+    </HBox>
+   <Label text="Data" GridPane.rowIndex="4" />
+   <DatePicker fx:id="dataRifa" promptText="Data da Rifa" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+   <Label text="Qtd Dezenas:" GridPane.rowIndex="5" />
+   <ChoiceBox id="qtdDezenas" fx:id="qtdDezenas" prefWidth="150.0" value="3" GridPane.columnIndex="1" GridPane.rowIndex="5">
+       <items>
+           <FXCollections fx:factory="observableArrayList">
+               <Integer fx:value="3" />
+               <Integer fx:value="2" />
+               <Integer fx:value="1" />
+           </FXCollections>
+       </items>
+       <value>
+           <Integer fx:value="3" />
+       </value>
+   </ChoiceBox>
+
+
+
+   <columnConstraints>
+      <ColumnConstraints maxWidth="94.0" minWidth="55.0" prefWidth="93.0" />
+      <ColumnConstraints maxWidth="520.0" minWidth="481.0" prefWidth="482.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+
+
+</GridPane>
