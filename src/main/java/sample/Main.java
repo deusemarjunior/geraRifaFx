@@ -1,39 +1,25 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.scene.text.Text;
-import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import sun.util.resources.LocaleData;
+import net.sf.jasperreports.engine.util.JRLoader;
 
-
-import javax.inject.Inject;
 import java.io.File;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.net.URL;
 import java.util.*;
 
 public class Main extends Application {
-
-    Controller controller = new Controller();
 
     private Stage primaryStage;
 
@@ -99,6 +85,7 @@ public class Main extends Application {
     public void onGerarRifa(ActionEvent event){
         System.out.println("Iniciou a Geração da Rifa");
 
+
         if(tituloField.getText() != null && !tituloField.getText().isEmpty()
                 && descricaoField.getText() != null && !descricaoField.getText().isEmpty()
                 && valorField.getText() != null && !valorField.getText().isEmpty()
@@ -106,6 +93,7 @@ public class Main extends Application {
                 && dataRifa.getValue() != null){
             mensagemLabel.setText("");
 
+            Controller controller = new Controller();
 
             Stage dialog = new Stage();
             dialog.setResizable(true);
@@ -119,7 +107,7 @@ public class Main extends Application {
 
             parametros.put("TITULO",tituloField.getText());
             parametros.put("DESCRICAO",descricaoField.getText());
-            parametros.put("VALOR",valorField.getText());
+            parametros.put("VALOR", new Double(valorField.getText()));
             //LocalDate _dataRifa = dataRifa.getValue();
 
             parametros.put("DATARIFA", DateUtils.asDate(dataRifa.getValue()));
@@ -128,7 +116,9 @@ public class Main extends Application {
 
             List<String> listNumeros = controller.gerarSequencias(new Integer(qtdDezenas.getValue().toString()));
             try {
-                jasperPrint = JasperFillManager.fillReport("target/classes/rifa-10-por-pagina.jasper", parametros,
+                JasperReport jr = (JasperReport) JRLoader.loadObject( getClass().getResourceAsStream("/rifa-10-por-pagina.jasper"));
+
+                jasperPrint = JasperFillManager.fillReport(jr, parametros,
                         new JRBeanCollectionDataSource(listNumeros));
             } catch (JRException e) {
                 // TODO Auto-generated catch block

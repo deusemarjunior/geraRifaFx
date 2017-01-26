@@ -64,10 +64,11 @@ public class Controller {
             }
         }
 
+        /* teste para verificar a sequencia numerica
         for (String linha : numeros) {
-       //     System.out.println(" Linha --> " + linha );
+           System.out.println(" Linha --> " + linha );
         }
-
+        */
         return numeros;
     }
 
