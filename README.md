@@ -3,7 +3,7 @@ Generate Ticket Raffle used Java FX, Jasper Report, Maven
 
 Raffle by Federal Lotery from Brazil
 
-*[Loteria Caixa] (http://loterias.caixa.gov.br/wps/portal/loterias/landing/federal) - You can verify result based on date
+*[Loteria Caixa] (http://loterias.caixa.gov.br/wps/portal/loterias/landing/federal) - You can verify result based on date, The three numbers of the first premium
 
 
 ### Install
@@ -22,7 +22,7 @@ mvn -DdistributionTargetDir="$HOME/app/maven/apache-maven-3.5.x-SNAPSHOT" clean 
 ### Usage
 Locate jar file and execute
 ```
-java - jar geraRifaFx-1.0-SNAPSHOT-jar-with-dependencies.jar
+java - jar geraRifaFx-1.2-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 
