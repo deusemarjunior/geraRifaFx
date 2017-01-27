@@ -31,16 +31,16 @@
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement x="215" y="52" width="41" height="14" uuid="93023495-f10f-4e8c-89fc-a1eb50a3d3bd"/>
+				<reportElement x="212" y="52" width="41" height="14" uuid="93023495-f10f-4e8c-89fc-a1eb50a3d3bd"/>
 				<textElement verticalAlignment="Middle">
 					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[VALOR:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="323" y="48" width="218" height="20" uuid="24a617cf-f229-4d38-a3b0-bff80456dd84"/>
-				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+				<reportElement x="325" y="51" width="222" height="20" uuid="24a617cf-f229-4d38-a3b0-bff80456dd84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["NÚMERO(S): " + $F{_THIS}]]></textFieldExpression>
 			</textField>
@@ -66,9 +66,9 @@
 				<text><![CDATA[TELEFONE:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="66" y="51" width="132" height="20" uuid="8b26d6ae-b11b-42b1-b10d-83db2898af12"/>
+				<reportElement x="58" y="51" width="141" height="20" uuid="8b26d6ae-b11b-42b1-b10d-83db2898af12"/>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{_THIS}]]></textFieldExpression>
 			</textField>
@@ -86,28 +86,28 @@
 				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="229" y="3" width="295" height="12" uuid="e594b899-a072-4449-85d2-9795f3cd4d33"/>
+				<reportElement x="215" y="5" width="326" height="15" uuid="e594b899-a072-4449-85d2-9795f3cd4d33"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="211" y="17" width="334" height="31" uuid="989ae7ba-8895-4619-92a5-ab6e1810a0a1"/>
+				<reportElement x="211" y="19" width="334" height="31" uuid="989ae7ba-8895-4619-92a5-ab6e1810a0a1"/>
 				<textElement verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DESCRICAO} + ", a correr pela extração da Loteria Federal do dia "+ new SimpleDateFormat("dd/MM/yyyy").format($P{DATARIFA}) + ", no 1º prêmio. "]]></textFieldExpression>
 			</textField>
 			<textField pattern="¤ #,##0.00">
-				<reportElement x="11" y="56" width="53" height="14" uuid="63410957-232f-4495-9b12-5244c430a9b4"/>
+				<reportElement x="5" y="55" width="53" height="14" uuid="63410957-232f-4495-9b12-5244c430a9b4"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{VALOR}]]></textFieldExpression>
 			</textField>
 			<textField pattern="¤ #,##0.00">
-				<reportElement x="257" y="52" width="66" height="13" uuid="e3aeb08d-4511-4afe-a5b9-cc5fed157fb9"/>
+				<reportElement x="257" y="52" width="66" height="14" uuid="e3aeb08d-4511-4afe-a5b9-cc5fed157fb9"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>

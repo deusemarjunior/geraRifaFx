@@ -14,20 +14,20 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+<GridPane alignment="center" hgap="5.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
 
-    <Label alignment="CENTER" text="Bem Vindo" GridPane.columnIndex="1">
+    <Label alignment="CENTER" prefHeight="20.0" prefWidth="579.0" style="-fx-font-weight: bold;-fx-font-size: 1.2em" text="Bem Vindo ao Gerador de Bilhete de Rifa da Loteria Federal" textAlignment="CENTER" textFill="#2324bc" GridPane.columnIndex="0" GridPane.columnSpan="2">
       <font>
          <Font size="14.0" />
       </font></Label>
 
     <Label id="messageLabel" fx:id="mensagemLabel" prefHeight="17.0" prefWidth="479.0" textFill="#bc2a2a" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-    
+
     <Label fx:id="tituloLabel" text="Titulo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
     <TextField fx:id="tituloField" promptText="Rifa de Verão" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <Label fx:id="valorLabel" text="Valor Cartela R$:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Label fx:id="valorLabel" text="Valor Cartela:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 
     <TextField fx:id="valorField" promptText="5,00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
@@ -38,30 +38,36 @@
 
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
-        <Button fx:id="btnGerarRifa" onAction="#onGerarRifa" text="Gerar Rifa" />
+        <Button fx:id="btnGerarRifa" onAction="#onGerarRifa" style="-fx-font-weight: bold;" text="Gerar Rifa" />
     </HBox>
    <Label text="Data Sorteio:" GridPane.rowIndex="4" />
    <DatePicker fx:id="dataRifa" promptText="Data da Rifa" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
    <Label text="Qtd Dezenas:" GridPane.rowIndex="5" />
-   <ChoiceBox id="qtdDezenas" fx:id="qtdDezenas" prefWidth="150.0" value="3" GridPane.columnIndex="1" GridPane.rowIndex="5">
+   <ChoiceBox id="qtdDezenas" fx:id="qtdDezenas" prefWidth="150.0" value="4" GridPane.columnIndex="1" GridPane.rowIndex="5">
        <items>
            <FXCollections fx:factory="observableArrayList">
+               <Integer fx:value="4" />
                <Integer fx:value="3" />
                <Integer fx:value="2" />
                <Integer fx:value="1" />
            </FXCollections>
        </items>
        <value>
-           <Integer fx:value="3" />
+           <Integer fx:value="4" />
        </value>
    </ChoiceBox>
 
 
+    <Label alignment="CENTER" prefHeight="20.0" prefWidth="579.0" style="-fx-font-size: 1em" text="Desenvolvido por Deusemar Junior - @djrweb | djrweb@gmail.com" textAlignment="CENTER" textFill="#2324bc" GridPane.columnSpan="2" GridPane.rowIndex="9">
+        <font>
+            <Font size="9.0" />
+        </font>
+    </Label>
 
    <columnConstraints>
-      <ColumnConstraints maxWidth="112.0" minWidth="55.0" prefWidth="110.0" />
-      <ColumnConstraints maxWidth="520.0" minWidth="463.0" prefWidth="465.0" />
+      <ColumnConstraints maxWidth="152.0" minWidth="55.0" prefWidth="138.0" />
+      <ColumnConstraints maxWidth="520.0" minWidth="423.0" prefWidth="437.0" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
@@ -73,6 +79,7 @@
       <RowConstraints />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints />
       <RowConstraints />
    </rowConstraints>
