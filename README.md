@@ -22,7 +22,7 @@ mvn -DdistributionTargetDir="$HOME/app/maven/apache-maven-3.5.x-SNAPSHOT" clean 
 ### Usage
 Locate jar file and execute
 ```
-java - jar geraRifaFx-1.2-SNAPSHOT-jar-with-dependencies.jar
+java -jar geraRifaFx-1.2-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 Once the build completes, you should have a new Maven distro ready to roll in that directory!
