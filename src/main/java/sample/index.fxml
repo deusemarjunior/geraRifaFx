@@ -59,7 +59,7 @@
    </ChoiceBox>
 
 
-    <Label alignment="CENTER" prefHeight="20.0" prefWidth="579.0" style="-fx-font-size: 1em" text="Desenvolvido por Deusemar Junior - @djrweb | djrweb@gmail.com" textAlignment="CENTER" textFill="#2324bc" GridPane.columnSpan="2" GridPane.rowIndex="9">
+    <Label alignment="CENTER" prefHeight="20.0" prefWidth="579.0" style="-fx-font-size: 1em" text="Desenvolvido por Deusemar Junior - @deusemarjunior | chaves.djr@gmail.com" textAlignment="CENTER" textFill="#2324bc" GridPane.columnSpan="2" GridPane.rowIndex="9">
         <font>
             <Font size="9.0" />
         </font>
