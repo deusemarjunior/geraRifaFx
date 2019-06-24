@@ -27,7 +27,7 @@ java -jar geraRifaFx-1.2-SNAPSHOT-jar-with-dependencies.jar
 
 Once the build completes, you should have a new Maven distro ready to roll in that directory!
 
-### [Download Version 1.2] (https://www.dropbox.com/s/x3xp0dxwk6k9wme/geraRifaFx-1.2-SNAPSHOT-jar-with-dependencies.jar?dl=0)
+### [Download Version 1.3] (https://github.com/deusemarjunior/geraRifaFx/raw/master/lastVersion/geraRifaFx-1.3-SNAPSHOT-jar-with-dependencies.jar)
 
 
 ## Built With
